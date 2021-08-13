@@ -21,7 +21,7 @@ header{
     height: 11vh;
     background-color: var(--black);
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 
 nav{
@@ -58,7 +58,7 @@ nav{
     transition: 1s ease;
 }
 
-.btn:hover{
+.btn a:hover{
     color: var(--red);
     transition: 1s ease;
 }
@@ -193,7 +193,7 @@ footer h1{
     font-size: 2vh;
 }
 
-footer ul{
+footer ul, #menuExpand ul{
     font-size: 1.5vh;
     list-style: none;
 }
@@ -203,7 +203,7 @@ footer ul li{
     cursor: pointer;
 }
 
-footer ul li a:hover{
+footer ul li a:hover, #menuExpand ul li a:hover{
     transition: 1s ease;
     color: var(--red);
 }
@@ -229,9 +229,60 @@ footer ul li a{
 }
 
 #menuExpand{
-    width: 25vw;
-    height: 25vh;
+    width: 10vw;
+    height: 30vh;
     background-color: var(--black);
     position: absolute;
-    left: 100%;
+    left: 120%;
+    border: 1px solid white;
+    color: white;;
 }
+
+.italic{
+    font-style: italic;
+}
+
+#menuExpand ul li a{
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#menuExpand ul li, #menuExpand h1{
+    padding: 1vh;
+    font-size: 2vh;
+}
+
+#menuExpand h1{
+    font-size: 2.3vh;
+}
+
+header button a{
+    text-decoration: none;
+    color: white;
+}
+
+.logo a svg{
+    height: 7vh;
+    width: auto;
+    border: 1px solid transparent;
+    padding: 1vh;
+}
+
+.logo{
+    width: 15vw;
+    height: 11vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logo a svg:hover{
+    transition: 1s ease;
+    border: 1px solid var(--red);
+    fill: var(--red);
+}
+
+
+
