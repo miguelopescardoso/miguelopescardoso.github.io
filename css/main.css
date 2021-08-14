@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@600&display=swap');
+
+:root{
+    --red: #E21C41;
+    --black: #161618;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+header{
+    width: 100vw;
+    height: 11vh;
+    background-color: var(--black);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body{
+    min-height: 39vh;
+}
+
+nav{
+    width: 40vw;
+    height: 11vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.menuSvg{
+    width: 10vw;
+    height: 11vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuSvg svg{
+    height: 5.0vh;
+    width: auto;
+    padding: 1vh;
+    cursor: pointer;
+    border: 1px solid var(--red);
+}
+
+.logoBox{
+    width: 20vw;
+    height: 11vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoBox a svg{
+    cursor: pointer;
+    height: 5vh;
+    width: auto;
+    padding: 1vh;
+    border: 1px solid var(--red);
+    position: relative;
+    top: 0.2vh;
+}
+
+.logoBox a svg:hover{
+    transition: 1s ease;
+    border: 1px solid var(--red);
+}
+
+.showroomBtn{
+    height: 5vh;
+    padding: 1vh;
+    position: relative;
+    border: 1px solid var(--red);
+    background: none;
+    font-size: 2vh;
+    cursor: pointer;
+}
+
+.showroomBtn a{
+    padding: 1vh;
+    color: white;
+    text-decoration: none;
+}
+
+.box{
+    width: 100vw;
+    height: 44.5vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.white{
+    background-color: white;
+    color: var(--black);
+}
+
+.black{
+    background-color: var(--black);
+    color: white;
+}
+
+footer{
+    width: 100vw;
+    height: 50vh;
+    background-color: var(--black);
+}
+
+.footerContent{
+    width: 100vw;
+    height: 40vh;
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+}
+
+.footerName{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 100vw;
+    height: 5vh;
+}
+
+.footerContent ul{
+    list-style-type: none;
+}
+
+.footerContent ul li, .footerContent h1{
+    padding: 1vh;
+}
+
+.footerContent ul li a, .footerContent h1{
+    font-size: 2vh;
+}
+
+.footerName p, .footerName a, .footerContent ul li a{
+    font-size: 1.5vh;
+    color: white;
+}
+
+.icon{
+    height: 2.5vh;
+    width: auto;
+    position: relative;
+    top: 0.9vh;
+}
+
+.icon:hover{
+    transition: 1s ease;
+    fill: var(--red);
+}
+
+.socialMedia ul li{
+    font-size: 1.5vh;
+}
+
+.art img, .img img{
+    height: 15vh;
+    width: auto;
+    padding: 1vh 1vh 0vh 1vh;
+}
+
+.art, .img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+}
+
+.join{
+    border: 1px solid var(--red);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.art p{
+    font-size: 1.5vh;
+    padding: 0.5vh;
+}
+
+.text{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 43vw;
+}
+
+.text h1, .listTitle{
+    font-size: 1.7vh;
+}
+
+.text p, .text ul li{
+    font-size: 1.5vh;
+}
+
+.text h1, .text p, .text ul li{
+    padding: 0.5vh;
+}
+
+.list{
+    display: flex;
+}
+
+.text ul{
+    padding: 1vh 3vh;
+}
+
+.large img{
+    width: 60vw;
+    height: auto;
+}
+
