@@ -53,6 +53,10 @@ nav{
     cursor: pointer;
 }
 
+.btn a{
+    padding: 1vh;
+}
+
 .menu svg:hover{
     border: 1px solid var(--red);
     transition: 1s ease;
