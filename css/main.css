@@ -6,14 +6,15 @@
     --black: #161618;
 }
 
+html{
+    overflow-x: hidden;
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Ubuntu', sans-serif;
-}
-body{
-    overflow-x: hidden;
 }
 
 header{
@@ -22,49 +23,74 @@ header{
     background-color: var(--black);
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+body{
+    min-height: 39vh;
 }
 
 nav{
-    width: 15vw;
+    width: 40vw;
     height: 11vh;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.menu svg{
-    height: 5.07vh;
+.menuSvg{
+    width: 10vw;
+    height: 11vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuSvg svg{
+    height: 5.0vh;
     width: auto;
     padding: 1vh;
     cursor: pointer;
-
-    border: 1px solid transparent;
+    border: 1px solid var(--red);
 }
 
-.btn{
+.logoBox{
+    width: 20vw;
+    height: 11vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoBox a svg{
+    cursor: pointer;
+    height: 5vh;
+    width: auto;
+    padding: 1vh;
+    border: 1px solid var(--red);
+    position: relative;
+    top: 0.2vh;
+}
+
+.logoBox a svg:hover{
+    transition: 1s ease;
+    border: 1px solid var(--red);
+}
+
+.showroomBtn{
     height: 5vh;
     padding: 1vh;
     position: relative;
-    bottom: 1px;
     border: 1px solid var(--red);
     background: none;
-    color: white;
     font-size: 2vh;
     cursor: pointer;
 }
 
-.btn a{
+.showroomBtn a{
     padding: 1vh;
-}
-
-.menu svg:hover{
-    border: 1px solid var(--red);
-    transition: 1s ease;
-}
-
-.btn a:hover{
-    color: var(--red);
-    transition: 1s ease;
+    color: white;
+    text-decoration: none;
 }
 
 .box{
@@ -74,21 +100,6 @@ nav{
     justify-content: space-evenly;
     align-items: center;
 }
-
-.art img{
-    height: 30vh;
-    width: auto;
-}
-
-.art{
-    padding: 1vh;
-    border: 1px solid transparent;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    cursor: pointer;
-}
-
 
 .white{
     background-color: white;
@@ -100,193 +111,118 @@ nav{
     color: white;
 }
 
-.art:hover{
-    border: 1px solid var(--red);
-    transition: 1s ease;
-    color: var(--red);
-}
-
-.titleBox{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1.5vh;
-    font-size: 2vh;
-}
-
-.text h1, p{
-    padding: 1vh;
-}
-
-.img img{
-    height: 30vh;
-    width: auto;
-}
-
-.list{
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.list ul{
-    padding: 3vh;
-}
-
-.listTitle{
-    font-weight: bold;
-    font-size: 2vh;
-}
-
-.arrow svg{
-    height: 2vh;
-    width: auto;
-}
-
-#rect1, #rect2, #rect3{
-    fill:white;
-}
-
-.textBox{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
 footer{
     width: 100vw;
-    height: 35vh;
-    background-color:var(--black); 
-    color: white;
+    height: 50vh;
+    background-color: var(--black);
 }
 
 .footerContent{
     width: 100vw;
-    height: 30vh;
+    height: 40vh;
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
+    color: white;
 }
 
-.yearName{
-    width: 100vw;
-    height: 5vh;
+.footerName{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.6vh;
-}
-
-#name a:hover{
-    color: var(--red);
-    transition: 1s ease;
-}
-#name a{
     color: white;
-    cursor: pointer;
-    text-decoration: none;
+    width: 100vw;
+    height: 5vh;
 }
 
-.footerBox {
-    width: 20vw;
-    height: 25vh;
-    color: white;
+.footerContent ul{
+    list-style-type: none;
 }
 
-footer h1{
+.footerContent ul li, .footerContent h1{
+    padding: 1vh;
+}
+
+.footerContent ul li a, .footerContent h1{
     font-size: 2vh;
 }
 
-footer ul, #menuExpand ul{
+.footerName p, .footerName a, .footerContent ul li a{
     font-size: 1.5vh;
-    list-style: none;
-}
-
-footer ul li{
-    padding: 1vh;
-    cursor: pointer;
-}
-
-footer ul li a:hover, #menuExpand ul li a:hover{
-    transition: 1s ease;
-    color: var(--red);
-}
-
-footer ul li a{
     color: white;
-}
-
-.socialMedia{
-    width: 15vw;
 }
 
 .icon{
-    height: 2vh;
+    height: 2.5vh;
     width: auto;
     position: relative;
-    top: 0.7vh;
+    top: 0.9vh;
 }
 
-.socialMedia ul li:hover{
-    color: var(--red);
+.icon:hover{
     transition: 1s ease;
-}
-
-#menuExpand{
-    width: 10vw;
-    height: 30vh;
-    background-color: var(--black);
-    position: absolute;
-    left: 120%;
-    border: 1px solid white;
-    color: white;;
-}
-
-.italic{
-    font-style: italic;
-}
-
-#menuExpand ul li a{
-    color: white;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-#menuExpand ul li, #menuExpand h1{
-    padding: 1vh;
-    font-size: 2vh;
-}
-
-#menuExpand h1{
-    font-size: 2.3vh;
-}
-
-header button a{
-    text-decoration: none;
-    color: white;
-}
-
-.logo a svg{
-    height: 7vh;
-    width: auto;
-    border: 1px solid transparent;
-    padding: 1vh;
-}
-
-.logo{
-    width: 15vw;
-    height: 11vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-
-.logo a svg:hover{
-    transition: 1s ease;
-    border: 1px solid var(--red);
     fill: var(--red);
 }
 
+.socialMedia ul li{
+    font-size: 1.5vh;
+}
 
+.art img, .img img{
+    height: 15vh;
+    width: auto;
+    padding: 1vh 1vh 0vh 1vh;
+}
+
+.art, .img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+}
+
+.join{
+    border: 1px solid var(--red);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.art p{
+    font-size: 1.5vh;
+    padding: 0.5vh;
+}
+
+.text{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 43vw;
+}
+
+.text h1, .listTitle{
+    font-size: 1.7vh;
+}
+
+.text p, .text ul li{
+    font-size: 1.5vh;
+}
+
+.text h1, .text p, .text ul li{
+    padding: 0.5vh;
+}
+
+.list{
+    display: flex;
+}
+
+.text ul{
+    padding: 1vh 3vh;
+}
+
+.large img{
+    width: 60vw;
+    height: auto;
+}
 
