@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Exo:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
 :root{
     --red: #E21C41;
@@ -26,71 +25,143 @@ header{
     align-items: center;
 }
 
-body{
-    min-height: 39vh;
+.logoBox{
+    width: 25vw;
+    height: 11vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-nav{
-    width: 40vw;
+
+.logoSvg{
+    cursor: pointer;
+}
+
+.logoSvg svg{
+    height: 6.5vh;
+    width: auto;
+    padding: 1vh;
+    border: 1px solid var(--red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav{
+    width: 30vw;
     height: 11vh;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.menuSvg{
-    width: 10vw;
+.menu{
+    width: 15vw;
     height: 11vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.menuSvg svg{
-    height: 5.0vh;
-    width: auto;
-    padding: 1vh;
-    cursor: pointer;
-    border: 1px solid var(--red);
-}
 
-.logoBox{
-    width: 20vw;
+.showroom{
+    width: 30vw;
     height: 11vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.logoBox a svg{
-    cursor: pointer;
-    height: 5vh;
-    width: auto;
-    padding: 1vh;
-    border: 1px solid var(--red);
-    position: relative;
-    top: 0.2vh;
-}
-
-.logoBox a svg:hover{
-    transition: 1s ease;
-    border: 1px solid var(--red);
-}
-
-.showroomBtn{
-    height: 5vh;
-    padding: 1vh;
-    position: relative;
-    border: 1px solid var(--red);
+.showroom button{
     background: none;
-    font-size: 2vh;
+    height: 6.5vh;
+    width: auto;
+    padding: 1vh;
+    border: 1px solid var(--red);
     cursor: pointer;
 }
 
-.showroomBtn a{
-    padding: 1vh;
-    color: white;
+.showroom button a{
     text-decoration: none;
+    font-size: 2vh;
+    color: white;
+    font-weight: bold;
+}
+
+footer{
+    width: 100vw;
+    height: 50vh;
+    background-color: var(--black);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.footerContent{
+    width: 100vw;
+    height: 43vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.designerName{
+    width: 100vw;
+    height: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.designerName p, .designerName a{
+    font-size: 1.5vh;
+}
+
+.designerName a{
+    color: var(--red);
+    text-decoration: none;
+}
+
+.socialMedia{
+    height: 3vh;
+    width: 50vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.socialMedia a svg{
+    height: 3.5vh;
+    width: auto;
+}
+
+.footerBox{
+    width: 30vw;
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.footerBox ul h1{
+    font-size:2vh;
+}
+
+.footerBox ul li a{
+    font-size: 1.7vh;
+    color: white;
+}
+
+.footerBox ul{
+    list-style-type: none;
+}
+
+.footerBox ul li{
+    padding: 1vh 0;
 }
 
 .box{
@@ -111,118 +182,289 @@ nav{
     color: white;
 }
 
-footer{
-    width: 100vw;
-    height: 50vh;
-    background-color: var(--black);
+.white .art{
+    color: var(--black);
 }
 
-.footerContent{
-    width: 100vw;
-    height: 40vh;
-    display: flex;
-    justify-content: space-evenly;
+
+.art, .text, .img{
+    width: 35vw;
+    height: auto;
     color: white;
-}
-
-.footerName{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    width: 100vw;
-    height: 5vh;
-}
-
-.footerContent ul{
-    list-style-type: none;
-}
-
-.footerContent ul li, .footerContent h1{
-    padding: 1vh;
-}
-
-.footerContent ul li a, .footerContent h1{
     font-size: 2vh;
 }
 
-.footerName p, .footerName a, .footerContent ul li a{
-    font-size: 1.5vh;
-    color: white;
-}
-
-.icon{
-    height: 2.5vh;
-    width: auto;
-    position: relative;
-    top: 0.9vh;
-}
-
-.icon:hover{
-    transition: 1s ease;
-    fill: var(--red);
-}
-
-.socialMedia ul li{
-    font-size: 1.5vh;
-}
-
-.art img, .img img{
-    height: 15vh;
-    width: auto;
-    padding: 1vh 1vh 0vh 1vh;
-}
-
-.art, .img{
+.art{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    width: 40vw;
-}
-
-.join{
+    justify-content: center;
     border: 1px solid var(--red);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    cursor: pointer;
+}
+
+.art, .art2{
+    width: auto;
+}
+
+
+
+.art:hover, .art2:hover{
+    transition: 1s ease;
+    color: var(--red);
+}
+
+.art a img, .img img{
+    width: 33vw;
+    padding: 1vh 1vh 0.5vh 1vh;
 }
 
 .art p{
-    font-size: 1.5vh;
     padding: 0.5vh;
 }
 
-.text{
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    width: 43vw;
+.text h1, .listh h1{
+    font-size: 2vh;
+    padding: 0.5vh;
 }
 
-.text h1, .listTitle{
+.text h4{
+    font-size: 1.8vh;
+}
+
+.text p{
     font-size: 1.7vh;
-}
-
-.text p, .text ul li{
-    font-size: 1.5vh;
-}
-
-.text h1, .text p, .text ul li{
     padding: 0.5vh;
+}
+
+.mark{
+    color: var(--red);
 }
 
 .list{
-    display: flex;
+    color: var(--black);
 }
 
-.text ul{
-    padding: 1vh 3vh;
-}
-
-.large img{
-    width: 60vw;
+.block{
+    width: 17.5vw;
     height: auto;
+}
+
+.outer{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.list ul{
+    padding: 1vh;
+}
+
+.art2 a img{
+    height: 14vh;
+    width: auto;
+}
+
+.footerBox ul li a:hover{
+    transition: 1s ease;
+    color: var(--red);
+}
+
+.icon:hover{
+    fill:var(--red);
+}
+
+
+/*Media breakpoints*/
+
+@media only screen and (min-width: 375px) and (min-height: 677px){
+    .logoSvg svg{
+        height: 5vh;
+    }
+    .nav{
+        width: 60vw;
+    }
+
+    .showroom button{
+        height: 5vh;
+    }
+
+    .box h1{
+        font-size: 1.8vh;
+    }
+
+    .box p{
+        font-size: 1.4vh;
+    }
+
+    .box ul li{
+        font-size: 1.4vh;
+    }
+
+    .box ul h4{
+        font-size: 1.4vh;
+    }
+
+    .art a img{
+        height: 10vh;
+        width: auto;
+    }
+    
+}
+
+@media only screen and (min-width: 425px) and (min-height: 768px){
+    .nav{
+        width: 40vw;
+    }
+
+    .art a img, .img img{
+        height: 15vh;
+        width: auto;
+    }
+
+    .art{
+        width: auto;
+    }
+
+    .box h1{
+        font-size: 2vh;
+    }
+
+    .box h4{
+        font-size: 1.5vh;
+    }
+
+    .box ul li{
+        font-size: 1.5vh;
+    }
+
+    .box p{
+        font-size: 1.7vh;
+    }
+
+    .footerBox ul h1{
+        font-size: 1.7vh;
+    }
+
+    .footerBox ul li a{
+        font-size: 1.5vh;
+    }
+}
+
+@media only screen and (min-width: 768px) and (min-height: 1024px){
+    .box ul li{
+        font-size: 1.8vh;
+    }
+
+    .box ul h4{
+        font-size: 1.9vh;
+    }
+
+    .box h1{
+        font-size: 2.1vh;
+    }
+
+    .box p{
+        font-size: 1.9vh;
+    }
+
+    .art img{
+        height: 20vh;
+        width: auto;
+    }
+
+    .img img{
+        height: 18vh;
+        width: auto;
+    }
+
+    .nav{
+        width: 30vw;
+    }
+
+    .footerBox ul h1{
+        font-size: 2.2vh;
+    }
+
+    .footerBox ul li a{
+        font-size: 1.8vh;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (min-height: 768px){
+    .art a img{
+        width: 25vw;
+        height: auto;
+    }
+
+    .art2 a img{
+        height: 25vh;
+        width: auto;
+    }
+
+    .logoBox{
+        width: 15vw;
+    }
+
+    .nav{
+        width: 15vw;
+    }
+
+    .text h1{
+        font-size: 2.5vh;
+    }
+    .text p{
+        font-size: 2.1vh;
+    }
+
+    .list ul li{
+        font-size: 2.1vh;
+    }
+
+    .list ul h4{
+        font-size: 2.3vh;
+    }
+
+    .footerBox ul li a{
+        font-size: 2vh;
+    }
+
+    .footerBox ul h1{
+        font-size: 2.2vh;
+    }
+
+    .img img{
+        height: 25vh;
+        width: auto;
+    }
+}
+
+@media only screen and (min-width: 1440px) and (min-height: 900px){
+    .text h1{
+        font-size: 2.7vh;
+    }
+
+    .text p {
+        font-size: 2.4vh;
+    }
+
+    .footerBox h1{
+        font-size: 2.5vh;
+    }
+
+    .footerBox ul li a{
+        font-size: 2.3vh;
+    }
+
+    .list ul li a{
+        font-size: 2.3vh;
+    }
+
+    .list ul h4{
+        font-size: 2.4vh;
+    }
+
+    #showroomText{
+        font-size: 2.4vh;
+    }
 }
 
