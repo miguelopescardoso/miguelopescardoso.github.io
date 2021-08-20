@@ -1,470 +1,136 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alef:wght@400;700&display=swap');
 
 :root{
-    --red: #E21C41;
-    --black: #161618;
-}
-
-html{
-    overflow-x: hidden;
+    --black: rgb(29, 29, 29);
+    --red: #FE3535;
 }
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Alef', sans-serif;
 }
 
-header{
-    width: 100vw;
-    height: 11vh;
-    background-color: var(--black);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logoBox{
-    width: 25vw;
-    height: 11vh;
-    display: flex;
+.container, #loadingContainer{
+    width:100vw;
+    height: 100vh;
+    display:flex;
     justify-content: center;
     align-items: center;
-}
-
-
-.logoSvg{
-    cursor: pointer;
-}
-
-.logoSvg svg{
-    height: 6.5vh;
-    width: auto;
-    padding: 1vh;
-    border: 1px solid var(--red);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.nav{
-    width: 30vw;
-    height: 11vh;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.menu{
-    width: 15vw;
-    height: 11vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.showroom{
-    width: 30vw;
-    height: 11vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.showroom button{
-    background: none;
-    height: 6.5vh;
-    width: auto;
-    padding: 1vh;
-    border: 1px solid var(--red);
-    cursor: pointer;
-}
-
-.showroom button a{
-    text-decoration: none;
-    font-size: 2vh;
-    color: white;
-    font-weight: bold;
-}
-
-footer{
-    width: 100vw;
-    height: 50vh;
-    background-color: var(--black);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
-}
-
-.footerContent{
-    width: 100vw;
-    height: 43vh;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.designerName{
-    width: 100vw;
-    height: 4vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.designerName p, .designerName a{
-    font-size: 1.5vh;
-}
-
-.designerName a{
-    color: var(--red);
-    text-decoration: none;
-}
-
-.socialMedia{
-    height: 3vh;
-    width: 50vw;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.socialMedia a svg{
-    height: 3.5vh;
-    width: auto;
-}
-
-.footerBox{
-    width: 30vw;
-    height: 35vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-}
-
-.footerBox ul h1{
-    font-size:2vh;
-}
-
-.footerBox ul li a{
-    font-size: 1.7vh;
-    color: white;
-}
-
-.footerBox ul{
-    list-style-type: none;
-}
-
-.footerBox ul li{
-    padding: 1vh 0;
 }
 
 .box{
-    width: 100vw;
-    height: 44.5vh;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.white{
-    background-color: white;
-    color: var(--black);
-}
-
-.black{
-    background-color: var(--black);
-    color: white;
-}
-
-.white .art{
-    color: var(--black);
-}
-
-
-.art, .text, .img{
-    width: 35vw;
-    height: auto;
-    color: white;
-    font-size: 2vh;
-}
-
-.art{
+    width: 60vw;
+    height: 70vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    border: 1px solid var(--red);
-    cursor: pointer;
-}
-
-.art, .art2{
-    width: auto;
-}
-
-
-
-.art:hover, .art2:hover{
-    transition: 1s ease;
-    color: var(--red);
-}
-
-.art a img, .img img{
-    width: 33vw;
-    padding: 1vh 1vh 0.5vh 1vh;
-}
-
-.art p{
-    padding: 0.5vh;
-}
-
-.text h1, .listh h1{
-    font-size: 2vh;
-    padding: 0.5vh;
-}
-
-.text h4{
-    font-size: 1.8vh;
-}
-
-.text p{
-    font-size: 1.7vh;
-    padding: 0.5vh;
-}
-
-.mark{
-    color: var(--red);
-}
-
-.list{
-    color: var(--black);
-}
-
-.block{
-    width: 17.5vw;
-    height: auto;
-}
-
-.outer{
-    display: flex;
     justify-content: space-evenly;
 }
 
-.list ul{
-    padding: 1vh;
+.image{
+    width: 60vw;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.art2 a img{
-    height: 14vh;
-    width: auto;
+.image img{
+    box-shadow: 5px 5px 5px 5px #FE3535;
 }
 
-.footerBox ul li a:hover{
-    transition: 1s ease;
-    color: var(--red);
+.text{
+    width: 60vw;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.icon:hover{
-    fill:var(--red);
+.text button{
+    width: 60vw;
+    height: 10vh;
+    border: 1px solid var(--red);
+    background: none;
+    color: white;
+    cursor: pointer;
+    font-size: 2.5vh;
+    font-weight: 600;
 }
 
-
-/*Media breakpoints*/
-
-@media only screen and (min-width: 375px) and (min-height: 677px){
-    .logoSvg svg{
-        height: 5vh;
-    }
-    .nav{
-        width: 60vw;
-    }
-
-    .showroom button{
-        height: 5vh;
-    }
-
-    .box h1{
-        font-size: 1.8vh;
-    }
-
-    .box p{
-        font-size: 1.4vh;
-    }
-
-    .box ul li{
-        font-size: 1.4vh;
-    }
-
-    .box ul h4{
-        font-size: 1.4vh;
-    }
-
-    .art a img{
-        height: 10vh;
-        width: auto;
-    }
-    
+body{
+    background-color: var(--black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-@media only screen and (min-width: 425px) and (min-height: 768px){
-    .nav{
-        width: 40vw;
-    }
-
-    .art a img, .img img{
-        height: 15vh;
-        width: auto;
-    }
-
-    .art{
-        width: auto;
-    }
-
-    .box h1{
-        font-size: 2vh;
-    }
-
-    .box h4{
-        font-size: 1.5vh;
-    }
-
-    .box ul li{
-        font-size: 1.5vh;
-    }
-
-    .box p{
-        font-size: 1.7vh;
-    }
-
-    .footerBox ul h1{
-        font-size: 1.7vh;
-    }
-
-    .footerBox ul li a{
-        font-size: 1.5vh;
-    }
+.text button:hover{
+    transition: 0.7s ease;
+    background-color: var(--red);
 }
 
-@media only screen and (min-width: 768px) and (min-height: 1024px){
-    .box ul li{
-        font-size: 1.8vh;
-    }
-
-    .box ul h4{
-        font-size: 1.9vh;
-    }
-
-    .box h1{
-        font-size: 2.1vh;
-    }
-
-    .box p{
-        font-size: 1.9vh;
-    }
-
-    .art img{
-        height: 20vh;
-        width: auto;
-    }
-
-    .img img{
-        height: 18vh;
-        width: auto;
-    }
-
-    .nav{
-        width: 30vw;
-    }
-
-    .footerBox ul h1{
-        font-size: 2.2vh;
-    }
-
-    .footerBox ul li a{
-        font-size: 1.8vh;
-    }
+#loadingContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#loadingContainer .text p{
+    color: white;
+    font-size:2.5vh;
+    font-weight: 600;
 }
 
-@media only screen and (min-width: 1024px) and (min-height: 768px){
-    .art a img{
-        width: 25vw;
-        height: auto;
-    }
-
-    .art2 a img{
-        height: 25vh;
-        width: auto;
-    }
-
-    .logoBox{
-        width: 15vw;
-    }
-
-    .nav{
-        width: 15vw;
-    }
-
-    .text h1{
-        font-size: 2.5vh;
-    }
-    .text p{
-        font-size: 2.1vh;
-    }
-
-    .list ul li{
-        font-size: 2.1vh;
-    }
-
-    .list ul h4{
-        font-size: 2.3vh;
-    }
-
-    .footerBox ul li a{
-        font-size: 2vh;
-    }
-
-    .footerBox ul h1{
-        font-size: 2.2vh;
-    }
-
-    .img img{
-        height: 25vh;
-        width: auto;
-    }
+#loadingContainer{
+    display: none;
 }
 
-@media only screen and (min-width: 1440px) and (min-height: 900px){
-    .text h1{
-        font-size: 2.7vh;
-    }
-
-    .text p {
-        font-size: 2.4vh;
-    }
-
-    .footerBox h1{
-        font-size: 2.5vh;
-    }
-
-    .footerBox ul li a{
-        font-size: 2.3vh;
-    }
-
-    .list ul li a{
-        font-size: 2.3vh;
-    }
-
-    .list ul h4{
-        font-size: 2.4vh;
-    }
-
-    #showroomText{
-        font-size: 2.4vh;
-    }
+.bar{
+    width: 60vw;
+    height: 10vh;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid var(--red);
+    display: flex;
+    justify-content: left;
 }
 
+.color{
+    background-color: var(--red);
+    width: 10%;
+    height: 100%;
+    animation: bar 3s;
+}
+
+@keyframes bar{
+    0%{
+        width: 10%;
+    }
+    10%{
+        width: 30%;
+    }
+    15%{
+        width: 35%;
+    }
+    35%{
+        width: 60%;
+    }
+    56%{
+        width: 70%;
+    }
+    70%{
+        width: 80%;
+    }
+    80%{
+        width: 90%;
+    }
+    90%{
+        width: 98%;
+    }
+    100%{
+        width: 100%;
+    }
+
+}

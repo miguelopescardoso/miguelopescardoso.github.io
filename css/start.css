@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Alef:wght@400;700&display=swap');
+
+:root{
+    --black: rgb(29, 29, 29);
+    --red: #FE3535;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Alef', sans-serif;
+}
+
+.phoneContainer{
+    width: 100vw;
+    height: auto;
+}
+
+.phoneContainer img{
+    width: 100vw;
+    height: auto;
+    float: left;
+}
+
+header{
+    width: 100vw;
+    height: 11vh;
+    background-color: var(--black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav{
+    width: 50vw;
+    height: 11vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.logo{
+    width: 11vh;
+    height: 11vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img{
+    width: 8vh;
+    height: 8vh;
+}
+
+nav button{
+    width: 15vw;
+    border: none;
+    font-size: 2.5vh;
+    font-weight: 600;
+    height: calc(11vh - 2px);
+    color: white;
+    background: none;
+}
+
+footer{
+    width: 100vw;
+    height: 4vh;
+    background-color: var(--black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    font-size: 1.5vh;
+    color: white;
+    font-weight: 100;
+}
+
+.container{
+    display: none;
+}
+
+@media only screen and (min-width: 1024px) and (min-height: 768px){
+    .phoneContainer{
+        display: none;
+    }
+
+    html{
+        overflow: hidden;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100vw;
+        height: 85vh;
+    }
+
+    .container figure{
+        width: 500%;
+        height:100%;
+        display: flex;
+        justify-content: center;
+    }
+    .container figure img{
+        width: 20%;
+        float: left;
+    }
+}
