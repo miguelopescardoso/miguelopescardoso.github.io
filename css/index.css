@@ -174,3 +174,10 @@ body{
         height: 10vh;
     }
 }
+
+@media only screen and (min-width:1920px) and (min-height: 1080px){
+    .image img{
+        width: 25vw;
+        height: auto;
+    }
+}
