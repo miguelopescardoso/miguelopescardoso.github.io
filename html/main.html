@@ -5,37 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyFruits</title>
+    <link rel="stylesheet" href="../css/main.css">
     <link rel="shortcut icon" href="../img/icon.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/start.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js" integrity="sha512-UxP+UhJaGRWuMG2YC6LPWYpFQnsSgnor0VUF3BHdD83PS/pOpN+FYbZmrYN+ISX8jnvgVUciqP/fILOXDjZSwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
     <header>
         <nav>
-            <button>SHOP</button>
+            <button onclick="shop()">SHOP</button>
             <div class="logo">
                 <img src="../img/iconLight.png" alt="">
             </div>
-            <button>ABOUT</button>
+            <button onclick="about()">ABOUT</button>
         </nav>
     </header>
-    <div class="phoneContainer">
-        <img src="../img/blueberry.png" alt="">
-        <img src="../img/grapefruit.png" alt="">
-        <img src="../img/kiwi.png" alt="">
-        <img src="../img/passionfruit.png" alt="">
+    <div class="outerBox">
+        <div class="slider">
+            <figure>
+                <img src="../img/blueberry.png" alt="">
+                <img src="../img/kiwi.png" alt="">
+                <img src="../img/passionfruit.png" alt="">
+                <img src="../img/grapefruit.png" alt="">
+                <img src="../img/blueberry.png" alt="">
+            </figure>
+        </div>
     </div>
-    <div class="container">
-        <figure>
-            <img src="../img/blueberry.png" alt="">
-            <img src="../img/grapefruit.png" alt="">
-            <img src="../img/kiwi.png" alt="">
-            <img src="../img/passionfruit.png" alt="">
-            <img src="../img/blueberry.png" alt="">
-        </figure>
+    <div class="outerBox">
+        <div class="slider">
+            <figure>
+                <img src="../img/banana.png" alt="">
+                <img src="../img/guava.png" alt="">
+                <img src="../img/papaya.png" alt="">
+                <img src="../img/strawberry.png" alt="">
+                <img src="../img/banana.png" alt="">
+            </figure>
+        </div>
     </div>
     <footer>
-        <p>Made by Miguel Lopes Cardoso</p>
+        <div class="social">
+
+        </div>
+        <div class="name">
+            <p>By Miguel Lopes Cardoso <script>document.write(new Date().getFullYear());</script></p>
+        </div>
     </footer>
 </body>
 </html>

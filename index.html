@@ -5,31 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyFruits</title>
+    <link rel="stylesheet" href="./css/index.css">
     <link rel="shortcut icon" href="./img/icon.png" type="image/x-icon">
-    <link rel="stylesheet" href="./css/main.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js" integrity="sha512-UxP+UhJaGRWuMG2YC6LPWYpFQnsSgnor0VUF3BHdD83PS/pOpN+FYbZmrYN+ISX8jnvgVUciqP/fILOXDjZSwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
-    <div class="container" id="container">
-        <div class="box">
+    <div class="box">
+        <div class="innerBox">
             <div class="image">
-                <a href="./html/main.html"><img src="./img/logo.png"></a>
+                <img src="./img/logo.png" alt="">
             </div>
             <div class="text">
-                <button onclick="action()">START MYFRUITS</button>
+                <button onclick="actionLoad()">START MYFRUITS</button>
             </div>
         </div>
     </div>
-    <div class="loadingContainer" id="loadingContainer">
-        <div class="bar">
-            <span class="color">
+    <div class="loadingScreen">
+        <div class="loadBox">
+            <div class="loadingBar">
+                <span class="fill">
 
-            </span>
+                </span>
+            </div>
         </div>
         <div class="text">
-            <p id="loadText">STARTING MYFRUITS...</p>
+            <p id="text">LOADING MYFRUITS...</p>
         </div>
     </div>
-    <script src="./js/action.js"></script>
+    <script src="./js/anim.js"></script>
 </body>
 </html>
