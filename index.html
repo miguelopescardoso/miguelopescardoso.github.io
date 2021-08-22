@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,11 +14,11 @@
         <nav>
             <div class="left">
                 <div class="logo">
-                    <img src="./img/newLogo.png" alt="">
+                    <img src="./img/newLogo.png" alt="" onclick="page('./index.html.html')">
                 </div>
             </div>
             <div class="right">
-                <div id="svg" onmouseover="fillEnt()" onmouseleave="fillLea()">
+                <div id="svg" onclick="page('./html/shop.html')">
                     <svg width="auto" height="4vh" viewBox="0 0 802 684" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g id="basket">
                         <ellipse id="1" cx="355.365" cy="409.382" rx="36.6349" ry="37.625" fill="white"/>
@@ -46,10 +46,19 @@
                         </g>
                     </svg>
                 </div>
-                <button>
+                <button onclick="page('./html/faq.html')" class="other">
+                    FAQ
+                </button>
+                <button onclick="page('./html/review.html')" class="other">
+                    REVIEW
+                </button>
+                <button onclick="page('./html/about.html')" class="other">
+                    ABOUT
+                </button>
+                <button onclick="page('./html/signin.html')">
                     SIGN IN 
                 </button>
-                <button>
+                <button onclick="page('./html/join.html')">
                     JOIN MYFRUITS
                 </button>
             </div>
@@ -74,6 +83,12 @@
         </figure>
     </div>
     <footer>
+        <div class="extra">
+            <button onclick="page('./html/faq.html')">FAQ</button>
+            <button onclick="page('./html/about.html')">ABOUT</button>
+            <button onclick="page('./html/review.html')">REVIEW</button>
+            <button onclick="page('./html/help.html')">HELP</button>
+        </div>
         <p>By Miguel Lopes Cardoso</p>
     </footer>
     <script src="./js/index.js"></script>

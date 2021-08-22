@@ -45,7 +45,7 @@ html{
     height: 11vh;
     nav{
         @extend .header;
-        @include flex(row, space-evenly, center);
+        @include flex(row, space-between, center);
         position: relative;
         .left{
             width: 30vw;
@@ -70,6 +70,16 @@ html{
                 &:hover{
                     transition: 0.6s ease;
                     border-bottom: 2px solid white;
+                }
+            }
+            .other{
+                display: none;
+                button{
+                    @include button();
+                    &:hover{
+                        transition: 0.6s ease;
+                        border-bottom: 2px solid white;
+                    }
                 }
             }
             #svg{
@@ -139,7 +149,12 @@ footer{
     height: 3.75vh;
     animation: color 45s infinite;
     background-color: #811814;
-    @include flex(row, center, center);
+    @include flex(column, space-evenly, center);
+    .extra{
+        display: none;
+        width: 100vw;
+        height: 15.09vh;
+    }
     p{
         font-size: $normal;
         font-weight: $bold;
@@ -175,6 +190,119 @@ footer{
         }
     }
 }
+
+@media only screen and (min-width: 375px), (min-height: 667px){
+    html{
+        height: 100vh;
+        overflow-x: hidden;
+    }
+
+    .header{
+        nav{
+            .left{
+                .logo{
+                    img{
+                        width: 25vw;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        height: 18.8305847076vh;
+        .extra{
+            @include flex(row, space-evenly, center);
+        }
+        button{
+            @include button();
+            padding: 1vh;
+        }
+    }
+}
+
+@media only screen and (min-width: 425px), (min-height: 800){
+    .header{
+        nav{
+            .left{
+                width: 35vw;
+                .logo{
+                    img{
+                        width: 20vw;
+                        height: auto;
+                    }
+                }
+            }
+
+            .right{
+                width: 60vw;
+            }
+        }
+    }
+    
+    footer{
+        height: 23.3vh;
+    }
+}
+
+@media only screen and (min-width: 1024px), (min-height: 768px){
+    .header{
+        nav{
+            .left{
+                width: 35vw;
+                .logo{
+                    img{
+                        width: 15vw;
+                        height: auto;
+                    }
+                }
+            }
+
+            .right{
+                width: 45vw;
+                button{
+                    font-size: 2.8vh;
+                }
+            }
+        }
+    }
+    footer{
+        height: 15vh;
+        .extra{
+            height: 10vh;
+            button{
+                font-size: 2.5vh;
+            }
+        }
+        p{
+            height: 5vh;
+        }
+    }
+}
+
+@media only screen and (min-width: 1440px), (min-height: 900px){
+    .header{
+        nav{
+            .left{
+                .logo{
+                    img{
+                        width: 10vw;
+                    }
+                }
+            }
+            .right{
+                width: 70vw;
+                .other{
+                    display: block;
+                    button{
+                        font-size: 2.8vh;
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 
 
