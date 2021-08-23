@@ -1,14 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Alef:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alef:wght@400;700&family=Rubik+Mono+One&family=Rubik:wght@700&display=swap");
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "Alef", sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 
 html {
-  height: 100vh;
+  min-height: 100vh;
   overflow-x: hidden;
 }
 
@@ -55,6 +55,19 @@ html {
 }
 
 .header nav .left .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: auto;
   height: 9vh;
 }
@@ -312,15 +325,12 @@ footer p {
 
 @media only screen and (min-width: 375px), (min-height: 667px) {
   html {
-    height: 100vh;
+    min-height: 100vh;
     overflow-x: hidden;
   }
   .header nav .left .logo img {
     width: 25vw;
     height: auto;
-  }
-  footer {
-    height: 18.8305847076vh;
   }
   footer .extra {
     display: -webkit-box;
@@ -337,7 +347,7 @@ footer p {
         -ms-flex-align: center;
             align-items: center;
   }
-  footer button {
+  footer .extra button {
     height: 8vh;
     width: auto;
     border: none;
@@ -347,32 +357,63 @@ footer p {
     font-weight: 700;
     color: white;
     cursor: pointer;
-    padding: 1vh;
+    height: 4vh;
+    padding: 0.5vh;
   }
 }
 
-@media only screen and (min-width: 425px), (min-height: 800) {
-  .header nav .left {
-    width: 35vw;
-  }
+@media only screen and (min-width: 280px), (min-height: 653px) {
   .header nav .left .logo img {
-    width: 20vw;
+    position: relative;
+    bottom: 0.7vh;
+    width: 25vw;
     height: auto;
   }
-  .header nav .right {
-    width: 60vw;
+  .header nav .right button {
+    font-size: 1.6vh;
   }
   footer {
-    height: 23.3vh;
+    height: 7.15vh;
+  }
+  footer p {
+    height: 2.15vh;
+  }
+}
+
+@media only screen and (min-width: 540px), (min-height: 720px) {
+  footer {
+    height: 10vh;
+  }
+  footer .extra {
+    height: 7.5vh;
+  }
+  footer p {
+    height: 2.5vh;
+  }
+}
+
+@media only screen and (min-width: 414px) and (min-height: 736px) {
+  footer {
+    height: 10vh;
+  }
+  footer .extra {
+    height: 7.5vh;
+  }
+  footer p {
+    height: 2.6vh;
   }
 }
 
 @media only screen and (min-width: 1024px), (min-height: 768px) {
+  html {
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
   .header nav .left {
     width: 35vw;
   }
   .header nav .left .logo img {
-    width: 15vw;
+    width: 12vw;
     height: auto;
   }
   .header nav .right {
@@ -395,7 +436,66 @@ footer p {
   }
 }
 
+@media only screen and (min-width: 425px), (min-height: 800px) {
+  html {
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  .header nav .left {
+    width: 35vw;
+  }
+  .header nav .left .logo img {
+    width: 20vw;
+    height: auto;
+  }
+  .header nav .right {
+    width: 60vw;
+  }
+  footer {
+    height: 23.3vh;
+  }
+}
+
+@media only screen and (min-width: 375px), (min-height: 812px) {
+  .header nav .right {
+    width: 80vw;
+  }
+  .header nav .right button {
+    font-size: 1.7vh;
+  }
+  .header nav .left .logo img {
+    width: 25vw;
+    height: auto;
+  }
+  footer .extra button {
+    font-size: 2vh;
+  }
+}
+
+@media only screen and (min-width: 411px), (min-height: 823px) {
+  .header nav .left .logo img {
+    width: 25vw;
+    height: auto;
+  }
+  .header nav .right {
+    width: 80vw;
+  }
+  .header nav .right button {
+    font-size: 2vh;
+  }
+  footer .extra button {
+    font-size: 2vh;
+  }
+  footer p {
+    font-size: 1.5vh;
+  }
+}
+
 @media only screen and (min-width: 1440px), (min-height: 900px) {
+  html {
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
   .header nav .left .logo img {
     width: 10vw;
   }
@@ -407,6 +507,55 @@ footer p {
   }
   .header nav .right .other button {
     font-size: 2.8vh;
+  }
+}
+
+@media only screen and (min-width: 412px), (min-height: 914px) {
+  .header nav .left .logo img {
+    width: 25vw;
+  }
+  .header nav .right {
+    width: 90vw;
+  }
+  .header nav .right .other {
+    display: none;
+  }
+  .header nav .right button {
+    font-size: 1.4vh;
+  }
+  footer {
+    height: 10vh;
+  }
+}
+
+@media only screen and (min-width: 768px), (min-height: 1024px) {
+  .header nav .left .logo img {
+    width: 20vw;
+  }
+  .header nav .right {
+    width: 90vw;
+  }
+  footer {
+    height: 10vh;
+  }
+  footer .extra {
+    height: 7.5vh;
+  }
+  footer p {
+    height: 2.5vh;
+  }
+}
+
+@media only screen and (min-width: 1848px), (min-height: 949px) {
+  .header nav .left .logo img {
+    width: 12vw;
+    height: auto;
+  }
+  .header nav .right .other {
+    display: block;
+  }
+  .header nav .right button {
+    font-size: 3.5vh;
   }
 }
 /*# sourceMappingURL=index.css.map */
