@@ -2,6 +2,7 @@
 
 $red: #FE3535;
 $black: #1f1f1f;
+$blue: #1DB4FF;
 $font: 'Rubik', sans-serif;
 $normal: 1.9vh;
 $bold: 700;
@@ -12,6 +13,10 @@ $bold: 700;
     padding: 0;
     box-sizing: border-box;
     font-family: $font;
+}
+
+body{
+    background-color: $black;
 }
 
 @mixin flex($direction, $justify, $align){
@@ -34,14 +39,11 @@ $bold: 700;
 }
 
 html{
-    min-height: 100vh;
     overflow-x: hidden;
 }
 
-
 .header{
     z-index: 1;
-    position: absolute;
     width: 100vw;
     height: 11vh;
     nav{
@@ -51,7 +53,7 @@ html{
         .left{
             width: 30vw;
             height: 9vh;
-            @include flex(row, center, center);
+            @include flex(row, left, center);
             .logo{
                 @include flex(row, center, center);
                 width: auto;
@@ -101,46 +103,92 @@ html{
     }
 }
 
-.slider {
-	overflow: hidden;
-    figure {
-        position: relative;
-        width: 500%;
-        margin: 0;
-        left: 0;
-        animation: 45s slider infinite;
-        img {
-            z-index: 0;
-            width: 20%;
-            float: left;
+.container{
+    width: 100vw;
+    height: 89vh;
+    @include flex(row, center, center);
+    .outerBox{
+        width: 85vw;
+        height: 70vh;
+        border: 1px solid gray;
+        .text{
+            width: 85vw;
+            height: 10vh;
+            color: white;
+            @include flex(column, space-evenly, center);
+            h2{
+                height: 6vh;
+                font-size: 2.5vh;
+                @include flex(row, center, center);
+            }
+            p{
+                @include flex(row, center, center);
+                font-size: $normal;
+                height: 4vh;
+                button{
+                    @extend p;
+                    border: none;
+                    background: none;
+                    color: white;
+                }
+            }
         }
-        @keyframes slider {
-            0% {
-                left: 0;
-            }
-            20% {
-                left: 0;
-            }
-            25% {
-                left: -100%;
-            }
-            45% {
-                left: -100%;
-            }
-            50% {
-                left: -200%;
-            }
-            70% {
-                left: -200%;
-            }
-            75% {
-                left: -300%;
-            }
-            95% {
-                left: -300%;
-            }
-            100% {
-                left: -400%;
+        .innerBox{
+            width: 85vw;
+            height: 60vh;
+            @include flex(row, center, center);
+            form{
+                width: 75vw;
+                height: 55vh;
+                border: 1px solid gray;
+                @include flex(column, space-evenly, center);
+                font-size: 2vh;
+                input{
+                    width: 70vw;
+                    height: 5vh;
+                    border: 1px solid gray;
+                    outline: none;
+                    background: none;
+                    color: white;
+                    &::placeholder{
+                        position: relative;
+                        left:2px;
+                        color: rgb(129, 129, 129);
+                        font-size: 2vh;
+                    }
+                    &:focus::placeholder{
+                        color: $blue;
+                    }
+                    &:focus{
+                        transition: 0.5s ease;
+                        border: 1px solid $blue;
+                    }
+
+                    &:-webkit-autifill::first-line{
+                        font-family: $font;
+                    }
+                    &:-webkit-autofill,
+                    &:-webkit-autofill:hover, 
+                    &:-webkit-autofill:focus, 
+                    &:-webkit-autofill:active
+                    {
+                    -webkit-box-shadow: 0 0 0 30px $black inset !important;
+                    -webkit-text-fill-color: white;
+                    font-family: $font;
+                    }
+                }
+                .submit{
+                    width: auto;
+                    padding: 0 1.5vh;
+                    height: 5.5vh;
+                    border-radius: 25px;
+                    color: $blue;
+                    cursor: pointer;
+                    &:hover{
+                        transition: 0.6s ease;
+                        border: 1px solid $blue;
+                    }
+                }
             }
         }
     }
@@ -149,8 +197,6 @@ html{
 footer{
     width: 100vw;
     height: 3.75vh;
-    animation: color 45s infinite;
-    background-color: #811814;
     @include flex(column, space-evenly, center);
     .extra{
         display: none;
@@ -165,36 +211,8 @@ footer{
         font-weight: $bold;
         color:white;
     }
-    @keyframes color{
-        0%{
-            background-color: #811814;
-        }
-        22%{
-            background-color: #811814;
-        }
-        25%{
-            background-color: #FAC140;
-        }
-        47%{
-            background-color: #FAC140;
-        }
-        50%{
-            background-color: #FE5F1F;
-        }
-        72%{
-            background-color: #fe5F1F;
-        }
-        75%{
-            background-color: #FE7AA1;
-        }
-        97%{
-            background-color: #FE7AA1;
-        }
-        100%{
-            background-color: #811814;
-        }
-    }
 }
+
 @media only screen and (width: 412px), (height: 914px){
     .header{
         nav{
@@ -209,6 +227,18 @@ footer{
             }
             .right{
                 width: 75vw;
+            }
+        }
+    }
+    .container{
+        .outerBox{
+            .text{
+                h2{
+                    font-size: 2vh;
+                }
+                p{
+                    font-size:1.7vh;
+                }
             }
         }
     }
@@ -256,6 +286,35 @@ footer{
             }
         }
     }
+    .container{
+        .outerBox{
+            height: 80vh;
+            width: 45vw;
+            .text{
+                height: 15vh;
+                width: 45vw;
+                h2{
+                    font-size: 3vh;
+                }
+                p{
+                    font-family: 2.5vh;
+                }
+            }
+            .innerBox{
+                width: 45vw;
+                height: 65vh;
+                form{
+                    width: 40vw;
+                    height: 60vh;
+                    input{
+                        width: 35vw;
+                        height: 5vh;
+                        font-size: 2.3vh;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (width: 280px),(heigth: 653px){
@@ -273,8 +332,4 @@ footer{
         }
     }
 }
-
-
-
-
 

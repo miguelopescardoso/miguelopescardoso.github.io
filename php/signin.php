@@ -1,12 +1,12 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyFruits</title>
-    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./sass/index.css">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../sass/signin.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js" integrity="sha512-UxP+UhJaGRWuMG2YC6LPWYpFQnsSgnor0VUF3BHdD83PS/pOpN+FYbZmrYN+ISX8jnvgVUciqP/fILOXDjZSwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
@@ -14,11 +14,11 @@
         <nav>
             <div class="left">
                 <div class="logo">
-                    <img src="./img/newLogo.png" alt="" onclick="page('./index.html')">
+                    <img src="../img/newLogo.png" alt="" onclick="page('../index.html')">
                 </div>
             </div>
             <div class="right">
-                <div id="svg" onclick="page('./html/shop.html')">
+                <div id="svg" onclick="page('../html/shop.html')">
                     <svg width="auto" height="4vh" viewBox="0 0 802 684" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g id="basket">
                         <ellipse id="1" cx="355.365" cy="409.382" rx="36.6349" ry="37.625" fill="white"/>
@@ -46,50 +46,38 @@
                         </g>
                     </svg>
                 </div>
-                <button onclick="page('./html/faq.html')" class="other">
+                <button onclick="page('../html/faq.html')" class="other">
                     FAQ
                 </button>
-                <button onclick="page('./html/review.html')" class="other">
+                <button onclick="page('../html/review.html')" class="other">
                     REVIEW
                 </button>
-                <button onclick="page('./html/about.html')" class="other">
+                <button onclick="page('../html/about.html')" class="other">
                     ABOUT
                 </button>
-                <button onclick="page('./php/signin.php')">
+                <button onclick="page('../php/signin.php')">
                     SIGN IN 
                 </button>
-                <button onclick="page('./php/join.php')">
+                <button onclick="page('../php/join.php')">
                     JOIN MYFRUITS
                 </button>
             </div>
         </nav>
     </header>
-    <div class="slider">
-        <figure>
-            <img src="./img/small/blueberry.png" alt="" class="img">
-            <img src="./img/small/kiwi.png" alt="" class="img">
-            <img src="./img/small/passionfruit.png" alt="" class="img">
-            <img src="./img/small/grapefruit.png" alt="" class="img">
-            <img src="./img/small/blueberry.png" alt="" class="img">
-        </figure>
-    </div>
-    <div class="slider">
-        <figure>
-            <img src="./img/small/lingonberry.png" alt="" class="img">
-            <img src="./img/small/lime.png" alt="" class="img">
-            <img src="./img/small/mango.png" alt="" class="img">
-            <img src="./img/small/watermelon.png" alt="" class="img">
-            <img src="./img/small/lingonberry.png" alt="" class="img">
-        </figure>
-    </div>
-    <div class="slider">
-        <figure>
-            <img src="./img/small/strawberry.png" alt="" class="img">
-            <img src="./img/small/banana.png"  alt="" class="img">
-            <img src="./img/small/papaya.png" alt="" class="img">
-            <img src="./img/small/guava.png" alt="" class="img">
-            <img src="./img/small/strawberry.png" alt="" class="img">
-        </figure>
+    <div class="container">
+        <div class="outerBox">
+            <div class="text">
+                <h2>CREATE A NEW MYFRUITS ACCOUNT</h2>
+                <p>OR&nbsp<button onclick="page('./signin.html')">LOG IN</button>&nbspTO AN EXISTING ONE</p>
+            </div>
+            <div class="innerBox">
+                <form action="../php/signup.php" method="POST">
+                    <input type="text" name="uname" id="" placeholder="USERNAME">
+                    <input type="password" name="pass" id="" placeholder="PASSWORD">
+                    <input type="submit" value="SIGN IN" class="submit">
+                </form>
+            </div>
+        </div>
     </div>
     <footer>
         <div class="extra">
@@ -99,6 +87,6 @@
         </div>
         <p>By Miguel Lopes Cardoso</p>
     </footer>
-    <script src="./js/index.js"></script>
+    <script src="../js/index.js"></script>
 </body>
 </html>

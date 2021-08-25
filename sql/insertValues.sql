@@ -1,0 +1,1 @@
+INSERT INTO Users(FirstName, LastName, UserName, Email, Pass) VALUES('$fname', "HE", "H", "H", "H");
